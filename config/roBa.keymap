@@ -27,7 +27,7 @@
 &kp TAB  &trans  &trans  &lt 3 SPACE  &lt 1 SPACE  &mt LEFT_SHIFT SPACE    &kp ENTER             &lt 2 ENTER                                &kp SLASH
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         LAYER_1 {
