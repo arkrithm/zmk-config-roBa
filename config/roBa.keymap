@@ -44,7 +44,7 @@
 &kp LEFT_SHIFT  &kp TAB  &kp LEFT_ALT  &lt 3 SPACE  &lt 1 SPACE  &kp SPACE           &kp BACKSPACE  &kp ENTER                                &kp ESCAPE
             >;
 
-            sensor-bindings = <&inc_dec_kp scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp &scroll_up_down>;
         };
 
         LAYER_1 {
@@ -55,7 +55,7 @@
 &kp LEFT_SHIFT  &kp TAB       &kp LEFT_ALT  &trans        &trans  &kp SPACE           &kp DELETE  &kp ENTER                                                       &kp ESCAPE
             >;
 
-            sensor-bindings = <&inc_dec_kp scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp &scroll_up_down>;
         };
 
         FUNCTION {
@@ -66,7 +66,7 @@
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans    &trans  &trans                           &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp &scroll_up_down>;
         };
 
         MOUSE {
@@ -77,7 +77,7 @@
 &kt LEFT_SHIFT  &kp TAB  &kp LEFT_ALT  &trans  &trans  &kp SPACE           &kp BACKSPACE     &kp ENTER                                &kp ESCAPE
             >;
 
-            sensor-bindings = <&inc_dec_kp scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp &scroll_up_down>;
         };
     };
 };
