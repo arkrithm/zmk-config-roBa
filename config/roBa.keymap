@@ -21,10 +21,10 @@
 
         default_layer {
             bindings = <
-&kp Q    &kp W   &kp E   &kp R        &kp T                                                      &kp Y        &kp U  &kp I      &kp O       &kp P
-&kp A    &kp S   &kp D   &kp F        &kp G        &kp LS(LG(S))           &mt LEFT_ALT ESCAPE   &kp H        &kp J  &kp K      &kp L       &kp SEMICOLON
-&kp Z    &kp X   &kp C   &kp V        &kp B        &kp LEFT_COMMAND        &kp LC(LEFT_CONTROL)  &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp SQT
-&kp TAB  &trans  &trans  &lt 3 SPACE  &lt 1 SPACE  &mt LEFT_SHIFT SPACE    &kp ENTER             &lt 2 ENTER                                &kp SLASH
+&kp Q           &kp W    &kp E         &kp R        &kp T                                           &kp Y      &kp U  &kp I      &kp O       &kp P
+&kp A           &kp S    &kp D         &kp F        &kp G        &kp LS(LG(S))       &lt 2 H        &kp H      &kp J  &kp K      &kp L       &kp SEMICOLON
+&kp Z           &kp X    &kp C         &kp V        &kp B        &kp LEFT_COMMAND    &kp LCTRL      &kp N      &kp M  &kp COMMA  &kp PERIOD  &kp SQT
+&kp LEFT_SHIFT  &kp TAB  &kp LEFT_ALT  &lt 3 SPACE  &lt 1 SPACE  &kp SPACE           &kp BACKSPACE  &kp ENTER                                &kp ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
@@ -32,10 +32,10 @@
 
         LAYER_1 {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4      &kp N5                                            &kp NUMBER_6    &kp N7          &kp N8        &kp N9            &kp N0
-&trans        &trans        &trans        &trans            &trans     &trans                  &trans         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT         &trans
-&trans        &trans        &trans        &trans            &trans     &trans                  &trans         &kp GRAVE       &kp MINUS       &kp EQUAL     &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&kp TAB       &trans        &trans        &kp LEFT_COMMAND  &kp SPACE  &mt LEFT_SHIFT SPACE    &kp BACKSPACE  &trans                                                          &kp NON_US_BACKSLASH
+&kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                                  &kp NUMBER_6    &kp N7          &kp N8        &kp N9            &kp N0
+&trans          &trans        &trans        &trans        &trans  &trans              &trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT         &kp SLASH
+&trans          &trans        &trans        &trans        &trans  &kp LEFT_COMMAND    &kp LCTRL   &kp GRAVE       &kp MINUS       &kp EQUAL     &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp LEFT_SHIFT  &kp TAB       &kp LEFT_ALT  &trans        &trans  &kp SPACE           &kp DELETE  &kp ENTER                                                       &kp ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -54,10 +54,10 @@
 
         MOUSE {
             bindings = <
-&trans   &trans  &trans  &trans            &trans                                               &trans     &kp HOME   &kp END    &trans  &trans
-&trans   &trans  &trans  &trans            &trans     &trans                  &trans            &mkp MCLK  &mkp LCLK  &mkp RCLK  &trans  &trans
-&trans   &trans  &trans  &trans            &trans     &trans                  &kp LEFT_CONTROL  &trans     &mkp MB4   &mkp MB5   &trans  &trans
-&kt TAB  &trans  &trans  &kp LEFT_COMMAND  &kp SPACE  &mt LEFT_SHIFT SPACE    &kp ENTER         &trans                                   &trans
+&trans          &trans   &trans        &trans  &trans                                        &trans     &kp HOME   &kp END    &trans  &trans
+&trans          &trans   &trans        &trans  &trans  &trans              &trans            &mkp MCLK  &mkp LCLK  &mkp RCLK  &trans  &trans
+&trans          &trans   &trans        &trans  &trans  &kp LEFT_COMMAND    &kp LEFT_CONTROL  &trans     &mkp MB4   &mkp MB5   &trans  &trans
+&kt LEFT_SHIFT  &kp TAB  &kp LEFT_ALT  &trans  &trans  &kp SPACE           &kp BACKSPACE     &kp ENTER                                &kp ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
