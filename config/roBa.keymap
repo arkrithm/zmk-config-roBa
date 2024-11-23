@@ -7,6 +7,7 @@
 #define MOUSE 4
 #define SCROLL 5
 #define NUM 6
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
 
 &mt {
     flavor = "balanced";
@@ -23,6 +24,13 @@
             #sensor-binding-cells = <0>;
             bindings = <&none>, <&none>;
         };
+        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            // 追加: スクロールのタップ時間を設定 (20ms)
+            tap-ms = <20>;
+        };
     };
 
     keymap {
@@ -36,7 +44,7 @@
 &kp LEFT_SHIFT  &kp TAB  &kp LEFT_ALT  &lt 3 SPACE  &lt 1 SPACE  &kp SPACE           &kp BACKSPACE  &kp ENTER                                &kp ESCAPE
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp scroll_up_down>;
         };
 
         LAYER_1 {
@@ -47,7 +55,7 @@
 &kp LEFT_SHIFT  &kp TAB       &kp LEFT_ALT  &trans        &trans  &kp SPACE           &kp DELETE  &kp ENTER                                                       &kp ESCAPE
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp scroll_up_down>;
         };
 
         FUNCTION {
@@ -58,7 +66,7 @@
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans    &trans  &trans                           &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp scroll_up_down>;
         };
 
         MOUSE {
@@ -69,7 +77,7 @@
 &kt LEFT_SHIFT  &kp TAB  &kp LEFT_ALT  &trans  &trans  &kp SPACE           &kp BACKSPACE     &kp ENTER                                &kp ESCAPE
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings = <&inc_dec_kp scroll_up_down>;
         };
     };
 };
